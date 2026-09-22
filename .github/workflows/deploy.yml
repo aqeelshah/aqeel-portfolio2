@@ -22,10 +22,10 @@ cache: npm
 - run: npm ci
 - run: npx ng build --base-href /aqeel-portfolio2/
 - run: touch dist/aqeel-portfolio/browser/.nojekyll
-- run: cp dist/aqeel-portfolio/browser/index.html dist/aqeel-portfolio2/browser/404.html
+- run: cp dist/aqeel-portfolio/browser/index.html dist/aqeel-portfolio/browser/404.html
 - uses: actions/upload-pages-artifact@v3
 with:
-path: dist/aqeel-portfolio2/browser
+path: dist/aqeel-portfolio/browser
 
 deploy:
 needs: build
